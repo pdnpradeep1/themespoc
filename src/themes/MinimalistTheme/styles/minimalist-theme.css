@@ -1,0 +1,104 @@
+/* src/themes/MinimalistTheme/styles/minimalist-theme.css */
+.minimalist-theme {
+    --font-family: 'Helvetica', 'Arial', sans-serif;
+    --heading-font: 'Helvetica', 'Arial', sans-serif;
+    
+    font-family: var(--font-family);
+    color: var(--text-color, #333333);
+    background-color: var(--background-color, #ffffff);
+  }
+  
+  .minimalist-theme h1, 
+  .minimalist-theme h2, 
+  .minimalist-theme h3, 
+  .minimalist-theme h4, 
+  .minimalist-theme h5, 
+  .minimalist-theme h6 {
+    font-family: var(--heading-font);
+    font-weight: 300;
+  }
+  
+  .minimalist-theme .site-header {
+    background-color: white;
+    box-shadow: none;
+    border-bottom: 1px solid #f0f0f0;
+  }
+  
+  .minimalist-theme .header-container {
+    padding: 20px;
+  }
+  
+  .minimalist-theme .store-name {
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-size: 1.2rem;
+  }
+  
+  .minimalist-theme .nav-link {
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-size: 0.8rem;
+  }
+  
+  .minimalist-theme .nav-link::after {
+    display: none;
+  }
+  
+  .minimalist-theme .nav-link:hover {
+    color: var(--primary-color);
+  }
+  
+  .minimalist-theme .btn {
+    border-radius: 0;
+    padding: 10px 20px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-size: 0.8rem;
+    font-weight: 400;
+  }
+  
+  .minimalist-theme .product-card {
+    box-shadow: none;
+    border: 1px solid #f0f0f0;
+    border-radius: 0;
+  }
+  
+  .minimalist-theme .product-name {
+    font-weight: 300;
+  }
+  
+  .minimalist-theme .product-price {
+    font-weight: 400;
+  }
+  
+  .minimalist-theme .section-title {
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-size: 1.5rem;
+    font-weight: 300;
+  }
+  
+  .minimalist-theme .section-title::after {
+    display: none;
+  }
+  
+  .minimalist-theme .hero-headline {
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    font-weight: 300;
+  }
+  
+  .minimalist-theme .category-name {
+    background-color: white;
+    color: black;
+    opacity: 0.9;
+  }
+  
+  .minimalist-theme .site-footer {
+    background-color: #f9f9f9;
+    color: #333;
+  }
+  
+  .minimalist-theme .footer-bottom {
+    border-top: 1px solid #eee;
+  }

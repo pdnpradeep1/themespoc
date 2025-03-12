@@ -1,0 +1,110 @@
+/* src/themes/BoldTheme/styles/bold-theme.css */
+.bold-theme {
+    --font-family: 'Poppins', sans-serif;
+    --heading-font: 'Poppins', sans-serif;
+    
+    font-family: var(--font-family);
+    color: var(--text-color, #1d3557);
+    background-color: var(--background-color, #f1faee);
+  }
+  
+  .bold-theme h1, 
+  .bold-theme h2, 
+  .bold-theme h3, 
+  .bold-theme h4, 
+  .bold-theme h5, 
+  .bold-theme h6 {
+    font-family: var(--heading-font);
+    font-weight: 700;
+  }
+  
+  .bold-theme .site-header {
+    background-color: var(--primary-color);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  }
+  
+  .bold-theme .store-name,
+  .bold-theme .nav-link,
+  .bold-theme .cart-total {
+    color: white;
+  }
+  
+  .bold-theme .search-input {
+    border: none;
+    border-radius: 20px 0 0 20px;
+  }
+  
+  .bold-theme .search-button {
+    border-radius: 0 20px 20px 0;
+    background-color: var(--secondary-color);
+  }
+  
+  .bold-theme .cart-icon {
+    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="white"><path d="M7 18c-1.1 0-1.99.9-1.99 2S5.9 22 7 22s2-.9 2-2-.9-2-2-2zM1 2v2h2l3.6 7.59-1.35 2.45c-.16.28-.25.61-.25.96 0 1.1.9 2 2 2h12v-2H7.42c-.14 0-.25-.11-.25-.25l.03-.12.9-1.63h7.45c.75 0 1.41-.41 1.75-1.03l3.58-6.49c.08-.14.12-.31.12-.48 0-.55-.45-1-1-1H5.21l-.94-2H1zm16 16c-1.1 0-1.99.9-1.99 2s.89 2 1.99 2 2-.9 2-2-.9-2-2-2z"/></svg>');
+  }
+  
+  .bold-theme .btn {
+    border-radius: 30px;
+    font-weight: 600;
+    text-transform: uppercase;
+    padding: 12px 25px;
+  }
+  
+  .bold-theme .btn-primary {
+    background-color: var(--primary-color);
+  }
+  
+  .bold-theme .btn-secondary {
+    background-color: var(--secondary-color);
+  }
+  
+  .bold-theme .product-card {
+    border-radius: 15px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.05);
+    overflow: hidden;
+  }
+  
+  .bold-theme .product-name {
+    font-weight: 700;
+    font-size: 1.2rem;
+  }
+  
+  .bold-theme .product-price {
+    font-size: 1.3rem;
+    color: var(--primary-color);
+  }
+  
+  .bold-theme .section-title {
+    font-weight: 800;
+    font-size: 2.2rem;
+    text-transform: uppercase;
+  }
+  
+  .bold-theme .section-title::after {
+    height: 6px;
+    background-color: var(--secondary-color);
+    width: 100px;
+  }
+  
+  .bold-theme .hero-headline {
+    font-weight: 800;
+    text-transform: uppercase;
+    font-size: 3.5rem;
+  }
+  
+  .bold-theme .hero-section::before {
+    background-color: rgba(0, 0, 0, 0.4);
+  }
+  
+  .bold-theme .category-name {
+    background-color: var(--secondary-color);
+    font-weight: 700;
+  }
+  
+  .bold-theme .site-footer {
+    background-color: var(--secondary-color);
+  }
+  
+  .bold-theme .footer-title {
+    text-transform: uppercase;
+  }

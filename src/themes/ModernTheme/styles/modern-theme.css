@@ -1,0 +1,80 @@
+/* src/themes/ModernTheme/styles/modern-theme.css */
+.modern-theme {
+    --font-family: 'Roboto', sans-serif;
+    --heading-font: 'Montserrat', sans-serif;
+    
+    font-family: var(--font-family);
+    color: var(--text-color, #333333);
+    background-color: var(--background-color, #ffffff);
+  }
+  
+  .modern-theme h1, 
+  .modern-theme h2, 
+  .modern-theme h3, 
+  .modern-theme h4, 
+  .modern-theme h5, 
+  .modern-theme h6 {
+    font-family: var(--heading-font);
+  }
+  
+  .modern-theme .site-header {
+    background-color: white;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+  }
+  
+  .modern-theme .footer-newsletter {
+    background-color: var(--primary-color);
+    color: white;
+    margin: -60px -20px 40px;
+    padding: 40px 20px;
+  }
+  
+  .modern-theme .footer-newsletter .newsletter-container {
+    background-color: transparent;
+    max-width: 700px;
+  }
+  
+  .modern-theme .footer-newsletter .newsletter-title,
+  .modern-theme .footer-newsletter .newsletter-description {
+    color: white;
+  }
+  
+  .modern-theme .footer-newsletter .newsletter-input {
+    background-color: rgba(255, 255, 255, 0.2);
+    border: none;
+    color: white;
+  }
+  
+  .modern-theme .footer-newsletter .newsletter-input::placeholder {
+    color: rgba(255, 255, 255, 0.7);
+  }
+  
+  .modern-theme .newsletter-form .btn-secondary {
+    background-color: white;
+    color: var(--primary-color);
+  }
+  
+  .modern-theme .product-card {
+    border-radius: 10px;
+  }
+  
+  .modern-theme .btn {
+    border-radius: 5px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: 600;
+  }
+  
+  .modern-theme .section-title::after {
+    height: 4px;
+    width: 80px;
+  }
+  
+  .modern-theme .nav-link::after {
+    height: 3px;
+  }
+  
+  .modern-theme .category-name {
+    background-color: var(--primary-color);
+    opacity: 0.9;
+  }
