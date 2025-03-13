@@ -1,0 +1,420 @@
+/* src/themes/BookStoreTheme/styles/book-store-theme.css */
+.book-store-theme {
+    --font-family: 'Helvetica', 'Arial', sans-serif;
+    --heading-font: 'Georgia', serif;
+    
+    font-family: var(--font-family);
+    color: var(--text-color, #333333);
+    background-color: var(--background-color, #ffffff);
+    font-weight: var(--body-weight, 400);
+  }
+  
+  .book-store-theme h1, 
+  .book-store-theme h2, 
+  .book-store-theme h3, 
+  .book-store-theme h4, 
+  .book-store-theme h5, 
+  .book-store-theme h6 {
+    font-family: var(--heading-font);
+    font-weight: var(--heading-weight, 700);
+  }
+  
+  /* Layout alignment styles */
+  .book-store-theme.content-alignment-center .main-content > * {
+    margin-left: auto;
+    margin-right: auto;
+    max-width: var(--content-width, 1200px);
+  }
+  
+  .book-store-theme .container {
+    max-width: var(--content-width, 1200px);
+    margin: 0 auto;
+    padding: 0 20px;
+  }
+  
+  /* Header styles for book store theme */
+  .book-store-theme .site-header[data-style="simple"] {
+    background-color: var(--nav-background);
+    color: var(--nav-text);
+    padding: 10px 0;
+  }
+  
+  .book-store-theme .site-header .header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .book-store-theme .store-logo {
+    height: 40px;
+  }
+  
+  .book-store-theme .store-name {
+    color: var(--nav-text);
+    font-family: var(--heading-font);
+    font-weight: bold;
+  }
+  
+  /* Top announcement bar */
+  .book-store-theme .announcement-bar {
+    background-color: var(--secondary-color);
+    color: white;
+    text-align: center;
+    padding: 8px 0;
+    font-size: 0.9rem;
+  }
+  
+  .book-store-theme .announcement-bar a {
+    color: white;
+    text-decoration: underline;
+  }
+  
+  /* Navigation menu with inline style */
+  .book-store-theme .site-header[data-nav-position="inline"] .nav-menu {
+    display: flex;
+    justify-content: center;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .book-store-theme .nav-link {
+    color: var(--nav-text);
+    padding: 0.5rem 1rem;
+    font-weight: normal;
+    font-size: 0.9rem;
+  }
+  
+  .book-store-theme .nav-link:hover {
+    text-decoration: underline;
+  }
+  
+  /* Search bar custom styling */
+  .book-store-theme .search-form {
+    display: flex;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 4px;
+    overflow: hidden;
+  }
+  
+  .book-store-theme .search-input {
+    background-color: transparent;
+    border: none;
+    color: var(--nav-text);
+    padding: 5px 10px;
+    font-size: 0.9rem;
+    width: 150px;
+  }
+  
+  .book-store-theme .search-input::placeholder {
+    color: rgba(255, 255, 255, 0.7);
+  }
+  
+  .book-store-theme .search-button {
+    background-color: transparent;
+    border: none;
+    color: var(--nav-text);
+    padding: 5px 10px;
+  }
+  
+  /* Product card with clean border style */
+  .book-store-theme .product-card[data-style="clean-border"] {
+    border: 1px solid #e0e0e0;
+    border-radius: 0;
+    box-shadow: none;
+    transition: transform 0.3s, box-shadow 0.3s;
+    overflow: hidden;
+    background-color: white;
+  }
+  
+  .book-store-theme .product-card[data-style="clean-border"]:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  }
+  
+  .book-store-theme .product-image-container {
+    padding: 20px;
+    background-color: #f8f8f8;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .book-store-theme .product-card .product-image {
+    max-height: 300px;
+    width: auto;
+    object-fit: contain;
+  }
+  
+  .book-store-theme .product-info {
+    padding: 15px;
+  }
+  
+  .book-store-theme .product-name {
+    font-family: var(--heading-font);
+    font-size: 1.1rem;
+    font-weight: 600;
+    margin-bottom: 5px;
+    color: var(--text-color);
+  }
+  
+  .book-store-theme .product-price {
+    color: var(--primary-color);
+    font-weight: 700;
+    font-size: 1.2rem;
+    display: flex;
+    align-items: center;
+    margin-top: 10px;
+  }
+  
+  .book-store-theme .original-price {
+    text-decoration: line-through;
+    color: #999;
+    font-size: 0.9rem;
+    margin-right: 8px;
+  }
+  
+  .book-store-theme .discount-tag {
+    background-color: var(--sale-tag);
+    color: white;
+    font-size: 0.8rem;
+    padding: 2px 6px;
+    border-radius: 3px;
+    margin-left: 8px;
+  }
+  
+  /* Product grid layout */
+  .book-store-theme .product-grid {
+    display: grid;
+    grid-template-columns: repeat(var(--product-grid-columns, 3), 1fr);
+    gap: 30px;
+    margin: 30px 0;
+  }
+  
+  /* Hero banner with book display */
+  .book-store-theme .hero-banner {
+    background-color: #1E7B85; /* Teal background like in the image */
+    padding: 30px 0;
+    margin-bottom: 40px;
+    border: 15px solid var(--secondary-color);
+  }
+  
+  .book-store-theme .hero-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: var(--content-width);
+    margin: 0 auto;
+    padding: 0 20px;
+  }
+  
+  .book-store-theme .book-display {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+  }
+  
+  .book-store-theme .featured-book {
+    max-height: 400px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s;
+  }
+  
+  .book-store-theme .featured-book:hover {
+    transform: translateY(-10px);
+  }
+  
+  .book-store-theme .hero-banner .store-logo {
+    max-width: 150px;
+    height: auto;
+    margin: 0 30px;
+  }
+  
+  /* Section titles */
+  .book-store-theme .section-title {
+    font-family: var(--heading-font);
+    font-size: 1.8rem;
+    text-align: left;
+    margin: 50px 0 20px;
+    padding-bottom: 10px;
+    position: relative;
+  }
+  
+  .book-store-theme .section-title::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 50px;
+    height: 3px;
+    background-color: var(--primary-color);
+  }
+  
+  /* Collections section */
+  .book-store-theme .collections-section {
+    margin: 60px 0;
+  }
+  
+  .book-store-theme .collections-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+  }
+  
+  .book-store-theme .collection-item {
+    background-color: #f8f8f8;
+    padding: 20px;
+    text-align: center;
+    border-radius: 5px;
+  }
+  
+  .book-store-theme .collection-title {
+    font-family: var(--heading-font);
+    font-size: 1.2rem;
+    margin: 10px 0;
+  }
+  
+  /* Button styling */
+  .book-store-theme .btn {
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    border-radius: 4px;
+    padding: 8px 16px;
+    font-weight: 500;
+    transition: background-color 0.3s;
+  }
+  
+  .book-store-theme .btn-secondary {
+    background-color: var(--secondary-color);
+  }
+  
+  .book-store-theme .btn:hover {
+    background-color: #141452; /* Darker blue */
+    transform: translateY(-2px);
+  }
+  
+  .book-store-theme .btn-secondary:hover {
+    background-color: #e06000; /* Darker orange */
+  }
+  
+  /* Newsletter section */
+  .book-store-theme .newsletter-container {
+    background-color: #f8f8f8;
+    padding: 30px;
+    text-align: center;
+    margin: 60px auto;
+    border-radius: 6px;
+  }
+  
+  .book-store-theme .newsletter-title {
+    font-family: var(--heading-font);
+    color: var(--primary-color);
+  }
+  
+  .book-store-theme .newsletter-form {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+  }
+  
+  .book-store-theme .newsletter-input {
+    border: 1px solid #ddd;
+    padding: 10px 15px;
+    width: 300px;
+    border-radius: 4px 0 0 4px;
+  }
+  
+  .book-store-theme .newsletter-form .btn {
+    border-radius: 0 4px 4px 0;
+  }
+  
+  /* Footer styling */
+  .book-store-theme .site-footer {
+    background-color: var(--nav-background);
+    color: var(--nav-text);
+    padding: 40px 0 20px;
+  }
+  
+  .book-store-theme .footer-title {
+    font-family: var(--heading-font);
+    margin-bottom: 15px;
+  }
+  
+  .book-store-theme .footer-links a {
+    color: var(--nav-text);
+    opacity: 0.9;
+  }
+  
+  .book-store-theme .footer-links a:hover {
+    opacity: 1;
+    text-decoration: underline;
+  }
+  
+  .book-store-theme .social-icons {
+    margin-top: 20px;
+  }
+  
+  .book-store-theme .social-icon {
+    color: var(--nav-text);
+    background-color: rgba(255, 255, 255, 0.1);
+  }
+  
+  .book-store-theme .social-icon:hover {
+    background-color: var(--secondary-color);
+  }
+  
+  .book-store-theme .payment-icons {
+    margin-top: 20px;
+    display: flex;
+    gap: 10px;
+  }
+  
+  .book-store-theme .payment-icon {
+    width: 40px;
+    height: 25px;
+    background-color: white;
+    border-radius: 3px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  /* Responsive adjustments */
+  @media (max-width: 768px) {
+    .book-store-theme .product-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .book-store-theme .hero-content {
+      flex-direction: column;
+    }
+    
+    .book-store-theme .featured-book {
+      margin-bottom: 20px;
+    }
+    
+    .book-store-theme .newsletter-form {
+      flex-direction: column;
+      align-items: center;
+    }
+    
+    .book-store-theme .newsletter-input {
+      width: 100%;
+      margin-bottom: 10px;
+      border-radius: 4px;
+    }
+    
+    .book-store-theme .newsletter-form .btn {
+      border-radius: 4px;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .book-store-theme .product-grid {
+      grid-template-columns: 1fr;
+    }
+    
+    .book-store-theme .collections-grid {
+      grid-template-columns: 1fr;
+    }
+  }

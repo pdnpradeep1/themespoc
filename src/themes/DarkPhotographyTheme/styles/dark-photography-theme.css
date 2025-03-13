@@ -1,0 +1,409 @@
+/* src/themes/DarkPhotographyTheme/styles/dark-photography-theme.css */
+.dark-photography-theme {
+    --font-family: 'Roboto', sans-serif;
+    --heading-font: 'Roboto', sans-serif;
+    
+    font-family: var(--font-family);
+    color: var(--text-color, #eeeeee);
+    background-color: var(--background-color, #111111);
+    font-weight: var(--body-weight, 300);
+  }
+  
+  .dark-photography-theme h1, 
+  .dark-photography-theme h2, 
+  .dark-photography-theme h3, 
+  .dark-photography-theme h4, 
+  .dark-photography-theme h5, 
+  .dark-photography-theme h6 {
+    font-family: var(--heading-font);
+    font-weight: var(--heading-weight, 700);
+    letter-spacing: 0.02em;
+  }
+  
+  /* Layout alignment styles */
+  .dark-photography-theme.content-alignment-full-width .main-content > * {
+    max-width: var(--content-width, 100%);
+    padding-left: 0;
+    padding-right: 0;
+    margin-left: 0;
+    margin-right: 0;
+    width: 100%;
+  }
+  
+  .dark-photography-theme.content-alignment-full-width .container {
+    max-width: 100%;
+    padding: 0;
+  }
+  
+  /* Header styles specific to dark photography theme */
+  .dark-photography-theme .site-header[data-style="dark-transparent"] {
+    background-color: var(--nav-background);
+    border-bottom: none;
+    position: relative;
+    z-index: 100;
+  }
+  
+  .dark-photography-theme .site-header .header-container {
+    padding: 15px 30px;
+  }
+  
+  .dark-photography-theme .store-name {
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+  }
+  
+  /* Navigation menu styling */
+  .dark-photography-theme .nav-menu {
+    text-transform: uppercase;
+    font-size: 0.9rem;
+    letter-spacing: 0.05em;
+  }
+  
+  .dark-photography-theme .nav-link {
+    color: var(--secondary-color);
+    padding: 0.5rem 1rem;
+  }
+  
+  .dark-photography-theme .nav-link:hover {
+    color: var(--primary-color);
+  }
+  
+  /* Search bar styling */
+  .dark-photography-theme .search-input {
+    background-color: rgba(255, 255, 255, 0.1);
+    border: none;
+    color: var(--text-color);
+    border-radius: 0;
+  }
+  
+  .dark-photography-theme .search-button {
+    background-color: var(--primary-color);
+    border-radius: 0;
+  }
+  
+  /* Product cards with dark minimal style */
+  .dark-photography-theme .product-card[data-style="dark-minimal"] {
+    background-color: transparent;
+    box-shadow: none;
+    border: none;
+    transition: transform 0.3s;
+    margin-bottom: 30px;
+  }
+  
+  .dark-photography-theme .product-card[data-style="dark-minimal"]:hover {
+    transform: translateY(-5px);
+  }
+  
+  .dark-photography-theme .product-card[data-style="dark-minimal"] .product-image-container {
+    margin-bottom: 15px;
+    overflow: hidden;
+  }
+  
+  .dark-photography-theme .product-card[data-style="dark-minimal"] .product-image {
+    transition: transform 0.5s;
+  }
+  
+  .dark-photography-theme .product-card[data-style="dark-minimal"]:hover .product-image {
+    transform: scale(1.05);
+  }
+  
+  .dark-photography-theme .product-card[data-style="dark-minimal"] .product-info {
+    padding: 15px 0;
+    text-align: left;
+  }
+  
+  .dark-photography-theme .product-card[data-style="dark-minimal"] .product-name {
+    font-size: 1.1rem;
+    margin-bottom: 5px;
+    font-weight: 500;
+  }
+  
+  .dark-photography-theme .product-card[data-style="dark-minimal"] .product-price {
+    color: var(--primary-color);
+    font-weight: 700;
+    font-size: 1.2rem;
+  }
+  
+  .dark-photography-theme .product-actions .btn {
+    background-color: transparent;
+    border: 1px solid var(--primary-color);
+    color: var(--primary-color);
+    text-transform: uppercase;
+    font-size: 0.8rem;
+    letter-spacing: 0.1em;
+    transition: all 0.3s;
+    border-radius: 0;
+  }
+  
+  .dark-photography-theme .product-actions .btn:hover {
+    background-color: var(--primary-color);
+    color: #111111;
+  }
+  
+  /* Featured sections with split layout */
+  .dark-photography-theme .featured-products-section {
+    padding: 0;
+    margin: 0;
+  }
+  
+  .dark-photography-theme .featured-products-section[data-layout="split-with-text"] {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    min-height: 500px;
+  }
+  
+  .dark-photography-theme .featured-products-section[data-layout="split-with-text"][data-position="right"] .section-content {
+    grid-column: 2;
+    grid-row: 1;
+    padding: 5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  
+  .dark-photography-theme .featured-products-section[data-layout="split-with-text"][data-position="right"] .section-image {
+    grid-column: 1;
+    grid-row: 1;
+    min-height: 500px;
+    background-size: cover;
+    background-position: center;
+  }
+  
+  .dark-photography-theme .featured-products-section[data-layout="split-with-text"][data-position="left"] .section-content {
+    grid-column: 1;
+    grid-row: 1;
+    padding: 5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  
+  .dark-photography-theme .featured-products-section[data-layout="split-with-text"][data-position="left"] .section-image {
+    grid-column: 2;
+    grid-row: 1;
+    min-height: 500px;
+    background-size: cover;
+    background-position: center;
+  }
+  
+  .dark-photography-theme .section-title {
+    font-size: 2.5rem;
+    margin-bottom: 1.5rem;
+    text-align: left;
+    padding-bottom: 0;
+  }
+  
+  .dark-photography-theme .section-title::after {
+    display: none;
+  }
+  
+  /* Hero section */
+  .dark-photography-theme .hero-section {
+    height: calc(100vh - 80px);
+    min-height: 600px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    background-color: #000;
+  }
+  
+  .dark-photography-theme .hero-section[data-text-alignment="left"] .hero-content {
+    text-align: left;
+    margin-left: 5%;
+    margin-right: auto;
+    max-width: 600px;
+    padding: 2rem;
+  }
+  
+  .dark-photography-theme .hero-headline {
+    font-size: 3.5rem;
+    line-height: 1.1;
+    margin-bottom: 1.5rem;
+    font-weight: 700;
+  }
+  
+  .dark-photography-theme .hero-subheading {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+    font-weight: 300;
+    opacity: 0.8;
+  }
+  
+  .dark-photography-theme .hero-section .btn {
+    background-color: var(--primary-color);
+    color: #000;
+    border: none;
+    padding: 0.8rem 2rem;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    border-radius: 0;
+  }
+  
+  /* Product grid for featured items */
+  .dark-photography-theme .product-grid[data-layout="alternating"] {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  
+  .dark-photography-theme .product-grid[data-layout="alternating"] > .product-card {
+    flex: 0 0 calc(50% - 15px);
+    margin-right: 30px;
+  }
+  
+  .dark-photography-theme .product-grid[data-layout="alternating"] > .product-card:nth-child(2n) {
+    margin-right: 0;
+  }
+  
+  .dark-photography-theme .product-grid[data-layout="alternating"] > .product-card:nth-child(4n+1),
+  .dark-photography-theme .product-grid[data-layout="alternating"] > .product-card:nth-child(4n+4) {
+    flex: 0 0 calc(60% - 15px);
+  }
+  
+  .dark-photography-theme .product-grid[data-layout="alternating"] > .product-card:nth-child(4n+2),
+  .dark-photography-theme .product-grid[data-layout="alternating"] > .product-card:nth-child(4n+3) {
+    flex: 0 0 calc(40% - 15px);
+  }
+  
+  /* Product showcases */
+  .dark-photography-theme .product-showcase {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding: 4rem 0;
+    background-color: #0a0a0a;
+  }
+  
+  .dark-photography-theme .product-showcase .product-image {
+    width: 80%;
+    margin: 0 auto;
+  }
+  
+  .dark-photography-theme .product-showcase .product-details {
+    padding: 2rem 3rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  
+  .dark-photography-theme .product-showcase .product-title {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+  }
+  
+  .dark-photography-theme .product-showcase .product-price {
+    font-size: 1.5rem;
+    color: var(--primary-color);
+    margin-bottom: 1.5rem;
+    font-weight: 700;
+  }
+  
+  /* Video section */
+  .dark-photography-theme .video-section {
+    padding: 4rem 0;
+    text-align: center;
+    background-color: #0a0a0a;
+  }
+  
+  .dark-photography-theme .video-section .video-title {
+    font-size: 1.5rem;
+    margin-bottom: 2rem;
+  }
+  
+  .dark-photography-theme .video-container {
+    max-width: 800px;
+    margin: 0 auto;
+    position: relative;
+    padding-bottom: 56.25%; /* 16:9 aspect ratio */
+    height: 0;
+    overflow: hidden;
+  }
+  
+  .dark-photography-theme .video-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+  
+  /* Testimonials section */
+  .dark-photography-theme .testimonials-section {
+    padding: 4rem 0;
+    text-align: center;
+  }
+  
+  .dark-photography-theme .testimonials-section .testimonial-title {
+    font-size: 1.8rem;
+    margin-bottom: 3rem;
+  }
+  
+  .dark-photography-theme .testimonials {
+    display: flex;
+    justify-content: center;
+    max-width: 900px;
+    margin: 0 auto;
+  }
+  
+  .dark-photography-theme .testimonial {
+    padding: 1.5rem;
+    text-align: center;
+  }
+  
+  .dark-photography-theme .testimonial-content {
+    font-style: italic;
+    margin-bottom: 1rem;
+  }
+  
+  .dark-photography-theme .testimonial-author {
+    font-weight: 500;
+  }
+  
+  /* Footer styling */
+  .dark-photography-theme .site-footer {
+    background-color: var(--footer-background);
+    padding: 4rem 0 2rem;
+  }
+  
+  /* Responsive adjustments */
+  @media (max-width: 768px) {
+    .dark-photography-theme .featured-products-section[data-layout="split-with-text"] {
+      grid-template-columns: 1fr;
+    }
+    
+    .dark-photography-theme .featured-products-section[data-layout="split-with-text"] .section-content,
+    .dark-photography-theme .featured-products-section[data-layout="split-with-text"] .section-image {
+      grid-column: 1;
+    }
+    
+    .dark-photography-theme .featured-products-section[data-layout="split-with-text"] .section-content {
+      grid-row: 2;
+      padding: 2rem;
+    }
+    
+    .dark-photography-theme .featured-products-section[data-layout="split-with-text"] .section-image {
+      grid-row: 1;
+      min-height: 300px;
+    }
+    
+    .dark-photography-theme .hero-headline {
+      font-size: 2.5rem;
+    }
+    
+    .dark-photography-theme .product-grid[data-layout="alternating"] > .product-card {
+      flex: 0 0 100% !important;
+      margin-right: 0;
+    }
+    
+    .dark-photography-theme .product-showcase {
+      grid-template-columns: 1fr;
+    }
+    
+    .dark-photography-theme .product-showcase .product-image {
+      grid-row: 1;
+    }
+    
+    .dark-photography-theme .product-showcase .product-details {
+      grid-row: 2;
+      padding: 2rem;
+    }
+  }
