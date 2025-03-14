@@ -1,0 +1,449 @@
+/* src/components/auth/UserAuth.css */
+/* User Authentication Dropdown */
+.user-auth-dropdown {
+    position: relative;
+  }
+  
+  .user-auth-toggle {
+    display: flex;
+    align-items: center;
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: var(--text-color, #333);
+    padding: 8px;
+    transition: color 0.3s;
+  }
+  
+  .user-auth-toggle:hover {
+    color: var(--primary-color, #4a90e2);
+  }
+  
+  .auth-icon {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+  }
+  
+  .auth-icon svg {
+    width: 20px;
+    height: 20px;
+  }
+  
+  .user-avatar {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--primary-color, #4a90e2);
+    color: white;
+    font-weight: 600;
+  }
+  
+  .user-avatar img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  
+  .avatar-text {
+    font-size: 16px;
+    text-transform: uppercase;
+  }
+  
+  .auth-dropdown {
+    position: absolute;
+    top: 100%;
+    right: 0;
+    width: 250px;
+    background-color: white;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+    border-radius: 4px;
+    padding: 16px;
+    z-index: 1000;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(10px);
+    transition: opacity 0.2s, transform 0.2s, visibility 0.2s;
+  }
+  
+  .auth-dropdown.open {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+  }
+  
+  .user-dropdown-content,
+  .auth-options {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .user-info {
+    margin-bottom: 10px;
+  }
+  
+  .user-greeting {
+    font-weight: 600;
+    font-size: 16px;
+    margin: 0 0 4px;
+  }
+  
+  .user-email {
+    font-size: 14px;
+    color: var(--text-light-color, #6c757d);
+    margin: 0;
+  }
+  
+  .dropdown-divider {
+    height: 1px;
+    background-color: #e9ecef;
+    margin: 8px 0;
+  }
+  
+  .user-menu {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .user-menu li {
+    margin-bottom: 8px;
+  }
+  
+  .user-menu li:last-child {
+    margin-bottom: 0;
+  }
+  
+  .user-menu a,
+  .user-menu button {
+    display: flex;
+    align-items: center;
+    padding: 8px;
+    color: var(--text-color, #333);
+    text-decoration: none;
+    border-radius: 4px;
+    transition: background-color 0.2s;
+    background: none;
+    border: none;
+    width: 100%;
+    text-align: left;
+    cursor: pointer;
+    font-size: 14px;
+  }
+  
+  .user-menu a svg,
+  .user-menu button svg {
+    margin-right: 10px;
+  }
+  
+  .user-menu a:hover,
+  .user-menu button:hover {
+    background-color: #f5f5f5;
+    color: var(--primary-color, #4a90e2);
+  }
+  
+  .logout-item button {
+    color: #dc3545;
+  }
+  
+  .logout-item button:hover {
+    background-color: #fff5f5;
+  }
+  
+  .auth-link {
+    padding: 10px 8px;
+    color: var(--text-color, #333);
+    text-decoration: none;
+    transition: color 0.2s;
+    display: block;
+    font-weight: 500;
+  }
+  
+  .auth-link:hover {
+    color: var(--primary-color, #4a90e2);
+  }
+  
+  /* Login and Register Modals */
+  .auth-modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 2000;
+  }
+  
+  .auth-modal {
+    background-color: white;
+    border-radius: 8px;
+    padding: 30px;
+    width: 100%;
+    max-width: 420px;
+    position: relative;
+    max-height: 90vh;
+    overflow-y: auto;
+  }
+  
+  .modal-close {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    background: none;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+    color: #aaa;
+    transition: color 0.2s;
+  }
+  
+  .modal-close:hover {
+    color: #333;
+  }
+  
+  .auth-modal-header {
+    text-align: center;
+    margin-bottom: 24px;
+  }
+  
+  .auth-modal-header h2 {
+    font-size: 24px;
+    margin-bottom: 8px;
+  }
+  
+  .auth-modal-header p {
+    color: var(--text-light-color, #6c757d);
+    margin: 0;
+  }
+  
+  .auth-error {
+    background-color: #f8d7da;
+    color: #721c24;
+    padding: 12px;
+    border-radius: 4px;
+    margin-bottom: 20px;
+    font-size: 14px;
+  }
+  
+  .auth-form {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+  
+  .form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+  }
+  
+  .form-group label {
+    font-size: 14px;
+    font-weight: 500;
+  }
+  
+  .form-group input {
+    padding: 10px 12px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 14px;
+    transition: border-color 0.2s, box-shadow 0.2s;
+  }
+  
+  .form-group input:focus {
+    border-color: var(--primary-color, #4a90e2);
+    box-shadow: 0 0 0 3px rgba(74, 144, 226, 0.1);
+    outline: none;
+  }
+  
+  .form-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+  
+  .checkbox-group {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    user-select: none;
+  }
+  
+  .checkbox-group input {
+    margin: 0;
+  }
+  
+  .checkbox-group label {
+    font-size: 14px;
+    color: var(--text-color, #333);
+    cursor: pointer;
+  }
+  
+  .forgot-password {
+    font-size: 14px;
+    color: var(--primary-color, #4a90e2);
+    text-decoration: none;
+  }
+  
+  .forgot-password:hover {
+    text-decoration: underline;
+  }
+  
+  .auth-separator {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    margin: 8px 0;
+  }
+  
+  .auth-separator::before,
+  .auth-separator::after {
+    content: '';
+    flex: 1;
+    border-bottom: 1px solid #e0e0e0;
+  }
+  
+  .auth-separator span {
+    padding: 0 10px;
+    font-size: 14px;
+    color: #888;
+  }
+  
+  .social-auth {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  
+  .social-auth-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    background-color: white;
+    cursor: pointer;
+    transition: background-color 0.2s;
+    font-size: 14px;
+  }
+  
+  .social-auth-btn:hover {
+    background-color: #f5f5f5;
+  }
+  
+  .auth-footer {
+    text-align: center;
+    margin-top: 10px;
+    font-size: 14px;
+  }
+  
+  .auth-footer .auth-link {
+    color: var(--primary-color, #4a90e2);
+    font-weight: 600;
+    display: inline;
+    padding: 0;
+  }
+  
+  .auth-footer .auth-link:hover {
+    text-decoration: underline;
+  }
+  
+  /* Responsive adjustments */
+  @media (max-width: 480px) {
+    .auth-modal {
+      padding: 20px;
+      width: 90%;
+    }
+    
+    .form-row {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 10px;
+    }
+  }
+
+
+  
+.auth-options {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
+  
+  .auth-options .auth-link {
+    background: none;
+    border: none;
+    text-align: left;
+    font-family: inherit;
+    font-size: inherit;
+    cursor: pointer;
+    color: var(--text-color, #333);
+    padding: 10px 8px;
+    transition: color 0.2s;
+    display: block;
+    font-weight: 500;
+    width: 100%;
+  }
+  
+  .auth-options .auth-link:hover {
+    color: var(--primary-color, #4a90e2);
+    background-color: #f8f9fa;
+  }
+  
+  /* Make sure the dropdown has correct positioning */
+  .auth-dropdown {
+    position: absolute;
+    top: 100%;
+    right: 0;
+    width: 250px;
+    background-color: white;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+    border-radius: 4px;
+    padding: 16px;
+    z-index: 1000;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(10px);
+    transition: opacity 0.2s, transform 0.2s, visibility 0.2s;
+  }
+  
+  .auth-dropdown.open {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+  }
+  
+  /* This is important for making the dropdown stay open when clicking inside it */
+  .auth-dropdown:hover {
+    display: block;
+  }
+  
+  /* Ensure the auth icon has consistent spacing */
+  .auth-icon {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+  }
+  
+  .auth-icon svg {
+    width: 20px;
+    height: 20px;
+  }
+  
+  /* Adjust dropdown position for mobile */
+  @media (max-width: 768px) {
+    .auth-dropdown {
+      width: 220px;
+      right: -20px;
+    }
+  }

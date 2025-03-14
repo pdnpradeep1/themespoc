@@ -1,9 +1,12 @@
 // src/components/common/Header.jsx
 import React from 'react';
 import { Link } from 'react-router-dom';
-import NavigationMenu from '../store/NavigationMenu';
+// Import new components
+import EnhancedNavigationMenu from '../store/EnhancedNavigationMenu';
+import UserAuthDropdown from '../auth/UserAuthDropdown';
 import SearchBar from '../store/SearchBar';
 import CartWidget from '../store/CartWidget';
+import { useAuth } from '../../context/AuthContext';
 
 const Header = ({ 
   storeName, 
@@ -15,6 +18,7 @@ const Header = ({
   headerStyle = 'standard',
   navigationPosition = 'below-header'
 }) => {
+  const { isLoggedIn, userData, logout } = useAuth();
   const headerClass = `site-header ${minimalist ? 'minimalist' : ''} ${bold ? 'bold' : ''}`;
 
   return (
@@ -30,17 +34,24 @@ const Header = ({
           </Link>
         </div>
         
-        {navigationPosition !== 'below-header' && <NavigationMenu position={navigationPosition} />}
+        {navigationPosition !== 'below-header' && (
+          <EnhancedNavigationMenu position={navigationPosition} />
+        )}
         
         <div className="header-actions">
           {showSearch && <SearchBar />}
+          <UserAuthDropdown 
+            isLoggedIn={isLoggedIn} 
+            userData={userData} 
+            onLogout={logout} 
+          />
           {showCart && <CartWidget />}
         </div>
       </div>
       
       {navigationPosition === 'below-header' && (
         <div className="navigation-container">
-          <NavigationMenu position={navigationPosition} />
+          <EnhancedNavigationMenu position={navigationPosition} />
         </div>
       )}
     </header>

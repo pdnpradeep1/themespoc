@@ -7,6 +7,7 @@ import App from './App';
 import { StoreProvider } from './context/StoreContext';
 import { ThemeProvider } from './context/ThemeContext';
 import { CartProvider } from './context/CartContext';
+import { AuthProvider } from './context/AuthContext'; // Add this import
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
@@ -15,7 +16,9 @@ root.render(
       <StoreProvider>
         <ThemeProvider>
           <CartProvider>
-            <App />
+            <AuthProvider> {/* Add this wrapper */}
+              <App />
+            </AuthProvider>
           </CartProvider>
         </ThemeProvider>
       </StoreProvider>

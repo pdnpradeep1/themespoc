@@ -1,0 +1,104 @@
+/* src/components/store/FloatingOffers.css */
+.floating-offers {
+    position: fixed;
+    z-index: 90;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+    width: 60px;
+    height: 100px;
+    background-color: #1b5e20;
+    color: white;
+    border: none;
+    cursor: pointer;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    font-family: inherit;
+    transition: background-color 0.3s;
+    bottom: 50%;
+    transform: translateY(50%);
+  }
+  
+  .floating-offers.right {
+    right: 0;
+    border-radius: 8px 0 0 8px;
+  }
+  
+  .floating-offers.left {
+    left: 0;
+    border-radius: 0 8px 8px 0;
+  }
+  
+  .floating-offers:hover {
+    background-color: #2e7d32;
+  }
+  
+  .offers-icon {
+    margin-bottom: 6px;
+  }
+  
+  .offers-icon svg {
+    width: 26px;
+    height: 26px;
+  }
+  
+  .offers-text {
+    font-size: 12px;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    white-space: nowrap;
+    writing-mode: vertical-rl;
+    transform: rotate(180deg);
+  }
+  
+  .offers-badge {
+    position: absolute;
+    top: 6px;
+    right: 6px;
+    background-color: #ff3d00;
+    color: white;
+    font-size: 12px;
+    font-weight: 700;
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  /* Vibration animation */
+  .floating-offers.vibrate {
+    animation: vibrate 2s cubic-bezier(0.36, 0.07, 0.19, 0.97) infinite;
+  }
+  
+  @keyframes vibrate {
+    0%, 100% {
+      transform: translateY(50%) rotate(0);
+    }
+    10%, 30%, 50%, 70%, 90% {
+      transform: translateY(50%) rotate(-1deg);
+    }
+    20%, 40%, 60%, 80% {
+      transform: translateY(50%) rotate(1deg);
+    }
+  }
+  
+  /* Responsive adjustments */
+  @media (max-width: 768px) {
+    .floating-offers {
+      width: 50px;
+      height: 90px;
+    }
+    
+    .offers-icon svg {
+      width: 22px;
+      height: 22px;
+    }
+    
+    .offers-text {
+      font-size: 11px;
+    }
+  }

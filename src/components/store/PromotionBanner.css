@@ -1,0 +1,145 @@
+/* src/components/store/PromotionBanner.css */
+.promotion-banner {
+    width: 100%;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 100;
+    position: relative;
+  }
+  
+  .promotion-banner.top {
+    position: relative;
+  }
+  
+  .promotion-banner.bottom {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+  }
+  
+  .promotion-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 16px;
+    text-align: center;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  .promotion-message {
+    margin: 0;
+    font-size: 14px;
+    font-weight: 500;
+  }
+  
+  .promotion-timer {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    font-size: 14px;
+  }
+  
+  .timer-unit {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-width: 40px;
+  }
+  
+  .timer-value {
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 1;
+  }
+  
+  .timer-label {
+    font-size: 10px;
+    opacity: 0.8;
+    text-transform: uppercase;
+    margin-top: 2px;
+  }
+  
+  .timer-separator {
+    font-weight: 700;
+    position: relative;
+    top: -5px;
+  }
+  
+  .promotion-link {
+    background-color: rgba(255, 255, 255, 0.25);
+    color: inherit;
+    text-decoration: none;
+    padding: 4px 12px;
+    border-radius: 4px;
+    font-size: 13px;
+    font-weight: 600;
+    transition: background-color 0.2s;
+    white-space: nowrap;
+  }
+  
+  .promotion-link:hover {
+    background-color: rgba(255, 255, 255, 0.35);
+  }
+  
+  .promotion-close {
+    position: absolute;
+    right: 12px;
+    top: 50%;
+    transform: translateY(-50%);
+    background: none;
+    border: none;
+    color: inherit;
+    font-size: 20px;
+    opacity: 0.6;
+    cursor: pointer;
+    transition: opacity 0.2s;
+    padding: 0;
+    line-height: 20px;
+    width: 20px;
+    height: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .promotion-close:hover {
+    opacity: 1;
+  }
+  
+  /* Responsive styles */
+  @media (max-width: 768px) {
+    .promotion-content {
+      flex-direction: column;
+      gap: 8px;
+    }
+    
+    .promotion-timer {
+      order: 1;
+    }
+    
+    .promotion-link {
+      order: 2;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .promotion-banner {
+      padding: 8px 30px 8px 15px;
+    }
+    
+    .promotion-message {
+      font-size: 12px;
+    }
+    
+    .timer-value {
+      font-size: 14px;
+    }
+    
+    .timer-label {
+      font-size: 9px;
+    }
+  }
